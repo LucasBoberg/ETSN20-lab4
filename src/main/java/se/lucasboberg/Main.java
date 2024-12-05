@@ -15,7 +15,8 @@ public class Main {
             var finder = new Finder(pattern, path);
             finder.find();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("An error occurred while reading the file: " + path);
+            System.exit(1);
         }
 
     }
